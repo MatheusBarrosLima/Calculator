@@ -1,6 +1,17 @@
 const expression = document.querySelector(".expression");
 const expressionDisplay = document.querySelector(".expressionDisplay");
 const buttons = document.querySelectorAll(".gridButtons button");
+const buttonHistory= document.querySelector(".buttonHistory");
+const modalHistory= document.querySelector(".modalHistory");
+const buttonCloseModal = document.querySelector(".buttonCloseModal");
+
+buttonHistory.addEventListener("click", () => {
+    modalHistory.showModal();
+});
+
+buttonCloseModal.addEventListener("click", () => {
+    modalHistory.close();
+});
 
 function clearScreen() {
     expression.innerHTML = "" 
